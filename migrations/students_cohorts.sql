@@ -1,3 +1,5 @@
+/* DROP TABLE IF EXISTS students; */
+
 /* DROP TABLE IF EXISTS cohorts; */
 
 CREATE TABLE cohorts (
@@ -6,9 +8,6 @@ CREATE TABLE cohorts (
   start_date DATE,
   end_date DATE
 );
-
-
-/* DROP TABLE IF EXISTS students; */
 
 CREATE TABLE students (
   id SERIAL PRIMARY KEY NOT NULL,
