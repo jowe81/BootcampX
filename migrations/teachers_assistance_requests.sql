@@ -1,5 +1,5 @@
-/* DROP TABLE IF EXISTS assistance_requests */
-/* DROP TABLE IF EXISTS teachers */
+DROP TABLE IF EXISTS assistance_requests CASCADE;
+DROP TABLE IF EXISTS teachers CASCADE;
 
 /* Compass version here */
 CREATE TABLE teachers (

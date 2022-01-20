@@ -1,7 +1,5 @@
-
-/* DROP TABLE IF EXISTS assignment_submissions; */
-
-/* DROP TABLE IF EXISTS assignments; */
+DROP TABLE IF EXISTS assignment_submissions CASCADE;
+DROP TABLE IF EXISTS assignments CASCADE;
 
 
 CREATE TABLE assignments (
