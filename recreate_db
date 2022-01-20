@@ -1,0 +1,3 @@
+psql -h localhost -p 5432 -U vagrant bootcampx < ./migrations/students_cohorts.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/cohorts.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/students.sql
