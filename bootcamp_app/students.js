@@ -2,7 +2,7 @@ const pool = require('./database/connection.js');
 
 //Read command line arguments
 const cohort = process.argv[2];
-const limit = process.argv[3] || 5;
+const limit = process.argv[3] || 5; //supply default to prevent syntax error on empty argument
 
 pool.query(`
 SELECT students.id, students.name, cohorts.name as cohort_name
