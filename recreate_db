@@ -1,3 +1,11 @@
 psql -h localhost -p 5432 -U vagrant bootcampx < ./migrations/students_cohorts.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./migrations/teachers_assistance_requests.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./migrations/assignments_submissions.sql
+
 psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/cohorts.sql
 psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/students.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/teachers.sql
+
+psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/assignments.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/assignment_submissions.sql
+psql -h localhost -p 5432 -U vagrant bootcampx < ./seeds/assistance_requests.sql
