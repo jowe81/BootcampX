@@ -1,10 +1,18 @@
 const pool = require('./database/connection.js');
 
-console.log("Querying...");
-pool.query('SELECT * FROM students LIMIT 5;')
+//Read command line arguments
+const cohort = process.argv[2];
+const limit = process.argv[3] || 5;
+
+pool.query(`
+SELECT students.id, students.name, cohorts.name as cohort_name
+FROM students
+JOIN cohorts ON cohorts.id = students.cohort_id
+WHERE cohorts.name LIKE '%${cohort}%'
+LIMIT ${limit};
+`)
   .then(res => {
-    console.log('Returned!');
     res.rows.forEach(student => {
-      console.log(`${student.name} has an id of ${student.id} and their phone number is ${student.phone}.`);
+      console.log(`${student.name} has an id of ${student.id} and they were in cohort ${student.cohort_name}.`);
     });
   }).catch(err => console.error('query error', err.stack));
